@@ -1,4 +1,6 @@
-<h1>{{title}}</h1>
+<h1>
+  {{ title }} ({{ quizzes.length }})
+</h1>
 <ul>
   <li
     *ngFor="let q of quizzes"
@@ -27,8 +29,8 @@ type="text"
 [(ngModel)]="newQuizName"
 />
 
-<button 
+<button
   (click)="addQuiz()"
 >
-Add
+  Add
 </button>
